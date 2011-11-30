@@ -1,0 +1,105 @@
+\documentclass[11pt,leqno]{article}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\frenchspacing
+\usepackage{indentfirst}
+
+
+\title{\LARGE Dokumentacja projektu \textbf{Tarantula}\\
+							Założenia ogólne}
+\author{Marcin Januszkiewicz, Piotr Sobczyk}
+\date{Wrocław, \today}
+
+\begin{document}
+
+\maketitle 
+\newpage
+\pagestyle{headings}
+\tableofcontents
+
+\newpage
+
+
+\newpage
+\section{Wprowadzenie}
+
+\subsection{Cel dokumentu założeń ogólnych}
+Celem niniejszego dokumentu jest opis wymagań stawianych aplikacji, ze względu na jej przeznaczenie i 
+sposób użycia oraz określenie najważniejszych założeń realizacji projektu. 
+Nie są poruszane tu kwestie implementacyjne, których szczegóły można znaleźć w osobnych dokumentach.
+
+\subsection{Ogólny opis produktu}
+\subsubsection{Czym jest Tarantula?}
+Tarantula jest silnikiem graficznym, to znaczy zbiorem funkcji i struktur (w rozumieniu programistycznym) mającym 
+na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. 
+Interfejs udostępniany przez karty graficznie jest bardzo niskiego poziomu - 
+opiera się na manipulowaniu podstawowymi figurami geometrycznymi przy użyciu niezaawansowanych funkcji.
+Dlatego każdy programista wykorzystujący możliwości kart graficznych do nietrywialnych celów musi skorzystać z jakiegoś silnika graficznego.
+
+\section{Opis użytkownika}
+\subsection{Dla kogo jest stworzona Tarantula?}
+
+Tarantula została stworzona dla osób tworzących aplikacje wyświetlające grafikę 3D. Ponieważ jest biblioteką a nie samodzielnym programem, nie jest bezpośrednio przydatna osobom które nie zajmują się pisaniem programów.
+
+\subsection{Dane statystyczne dotyczące użytkowników i rynku}
+
+\section{Dalszy opis produktu}
+
+\subsection{Podstawowe cechy}
+Do podstawowych cech oferowanych przez Tarantulę zaliczamy:
+\begin{itemize}
+ \item obsługa i ładowanie modeli i tekstur z popularnych formatów, dostarczanych na przykład przez programy 3d Studio Max i Blender. 
+ Pozwala to na abstrakcję od poziomu karty graficznej, gdzie istnieją tylko wielokąty.
+  \item wbudowane zarządzanie sceną
+\item wykonanie elementarnych przekształceń graficznych
+\item automatyczne optymalizacje takie jak usuwanie niewidocznych powierzchni, redukcja liczby trójkatów. Redukują one zasoby potrzebne na przechowywanie i generowanie grafiki.
+\item wykrywanie kolizji
+\item podstawowe wsparcie dla animacji
+\item systemy cząsteczkowe oparte o realistyczne modele fizyczne
+\item silnik poziomu detali umożliwiający tworzenie scen w dużej skali
+\item zaawansowane modele oświetlenia (szeroki zakres dynamiczny (HDR), oświetlenie globalne (global illumination))
+\item wykorzystanie możliwości najnowszych wersji API graficznych  - OpenGL 4.2
+\end{itemize}
+
+\subsection{Określenie pozycji produktu na rynku}
+Istnieje wiele programów wspomagających tworzenie grafiki komputerowej. ,,Tarantulę'' cechuje możliwość [coś tu musi być]
+
+\subsection{Podsumowanie możliwości}
+
+
+\section{Cechy produktu}
+
+Tarantula jest biblioteką napisaną w języku C++. Korzystanie z niej sprowadza się do zaimportowania odpowiednich plików nagłówkowych, 
+które zawierają deklaracje klas i funkcji. Korzystając z dostarczonej funkcjonalności wystarczy przygotować okno do wyświetlania grafiki, 
+uruchomić manadżera sceny i program jest gotowy do wyświetlania podstawowej grafiki.
+
+
+Głównym celem stworzenia silnika graficznego ,,Tarantula'' jest wykorzystanie go przez firmę przy produkcji własnych gier oraz narzędzi. 
+Stworzenie własnego silnika ma w tym wypadku ma pewne korzyści nad wykorzystaniem jednego z wielu płatnych i bezpłatnych silników 
+dostępnych na rynku. W przypadku silników komercyjnych przeszkodą jest oczywiście cena, natomiast w przypadku korzystania z darmowych 
+silników dochodzi konieczność zapewnienia zgodność z licencjami wszystkich komponentów użytych w silniku. Może to skutkować nawet 
+brakiem możliwości sprzedaży gry, lub oddaniu części dochodów twórcy silnika. Nie bez znaczenia jest też dostosowanie szczegółowych 
+możliwości i sposobu działania silnika do specyfiki gier pisanych przez firmę.
+
+\section{Podstawowe przypadki użycia}
+Podstawowe przypadki użycia
+\begin{itemize}
+\item jako silnik w grze
+\item jako element wyświetlający modele w przeglądarce zasobów graficznych
+\item jako komponent programu do tworzenia podstawowych animacji
+\end{itemize}
+
+\section{Inne wymagania produktu}
+
+\subsection{Spełniane normy}
+
+\subsection{Wymagania stawiane systemowi}
+
+
+\subsection{Licencjonowanie i instalacja}
+
+\subsection{Wymagania efektywnościowe}
+
+\end{document}
