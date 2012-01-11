@@ -15,9 +15,9 @@
 {\Large Studencka Pracownia Inżynierii Oprogramowania}\\[0.5cm]
 {\Large Zespół nr 8, IIUWr 2011/12}\\[2.5cm]
 
-{Marcin Januszkiewicz, Piotr Sobczyk}\\[0.5cm]
-{\huge Dokumentacja projektu \textbf{Tarantula}}\\[0.25cm]
-{ Założenia ogólne}\\[0.5cm]
+{\large Marcin Januszkiewicz, Piotr Sobczyk}\\[0.5cm]
+{\huge Dokumentacja projektu \textbf{Tarantula}}\\[0.5cm]
+{\huge Założenia ogólne}\\[0.5cm]
 \vfill
 {\large Wrocław, \today}
 \end{center}
@@ -31,40 +31,42 @@
 \section{Wprowadzenie}
 
 \subsection{Wstęp}
-Celem niniejszego dokumentu jest opis wymagań stawianych aplikacji, ze względu na jej przeznaczenie i 
+\noindent
+Celem niniejszego dokumentu jest opis wymagań stawianych aplikacji ze względu na jej przeznaczenie i 
 sposób użycia oraz określenie najważniejszych założeń realizacji projektu. 
-Nie są poruszane tu kwestie implementacyjne, których szczegóły można znaleźć w osobnych dokumentach.
+Nie są tu poruszane kwestie implementacyjne, których szczegóły można znaleźć w osobnych dokumentach. // konkretne odsylacze
 
 \subsection{Opis produktu}
 
 \subsubsection{Tło}
-
-Wraz z rosnącymi mocą i popularnością nowoczesnych kart graficznych, zwiększają się możliwości tworzenia zaawansowanej grafiki. 
+\noindent
+Wraz ze wzrostem mocy i popularności nowoczesnych kart graficznych, zwiększają się możliwości tworzenia grafiki. 
 Niestety metody programowania kart graficznych wymagają dużego nakładu pracy, ponieważ funkcje dostarczane przez producentów 
-działają na bardzo niskim poziomie abstrakcji. Obiekty rozumiane przez ten interfejs to jedynie trójwymiarowe modele z trójkątów i płaskie tekstury. 
-Wszystkie bardziej skomplikowane konstrukcje wymagają dużego wkładu własnego progrmamisty. W związku z tym pojawiło się na rynku wiele programów 
+działają na bardzo niskim poziomie abstrakcji. Na obiekty rozumiane przez ten interfejs składają się jedynie trójwymiarowe modele zbudowane z trójkątów i płaskich tekstur. 
+Wszystkie bardziej skomplikowane konstrukcje wymagają dużego wkładu własnego programisty. W związku z tym opracowano wiele programów 
 ułatwiających korzystanie z tych możliwości kart graficznych. 
 
 
 \subsubsection{Czym jest Tarantula?}
+\noindent
 Tarantula jest silnikiem graficznym, to znaczy zbiorem funkcji i struktur (w rozumieniu programistycznym) mającym 
 na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. 
 Interfejs udostępniany przez karty graficznie jest bardzo niskiego poziomu - 
-opiera się na manipulowaniu podstawowymi figurami geometrycznymi przy użyciu niezaawansowanych funkcji.
-Dlatego każdy programista wykorzystujący możliwości kart graficznych do nietrywialnych celów musi skorzystać z jakiegoś silnika graficznego.
+opiera się na manipulowaniu podstawowymi figurami geometrycznymi przy użyciu elementarnych funkcji.
+Dlatego każdy programista wykorzystujący możliwości kart graficznych do nietrywialnych celów musi skorzystać z jakiejś biblioteki graficznej.
 
 \section{Opis użytkownika}
-\subsection{Dla kogo została stworzona Tarantula?}
-
-Tarantula została stworzona dla osób tworzących aplikacje wyświetlające grafikę 3D. Ponieważ jest biblioteką a nie samodzielnym programem, 
-nie jest bezpośrednio przydatna osobom które nie zajmują się pisaniem programów.
+\subsection{Dla kogo jest Tarantula?}
+\noindent
+Tarantula została stworzona dla osób tworzących aplikacje wyświetlające obrazy trójwymiarowe. Ponieważ Tarantula jest biblioteką a nie samodzielnym programem, 
+nie jest bezpośrednio przydatna osobom, które nie zajmują się pisaniem programów.
 
 \section{Szczegółowy opis produktu}
 
 \subsection{Podstawowe cechy}
 Do podstawowych cech oferowanych przez Tarantulę zaliczamy:
 \begin{itemize}
- \item obsługa i ładowanie modeli i tekstur z popularnych formatów, dostarczanych na przykład przez programy 3d Studio Max i Blender. 
+ \item obsługę i ładowanie modeli i tekstur z popularnych formatów, dostarczanych na przykład przez programy 3d Studio Max i Blender. 
  Pozwala to na abstrakcję od poziomu karty graficznej, gdzie istnieją tylko wielokąty.
   \item wbudowane zarządzanie sceną
 \item wykonanie elementarnych przekształceń graficznych
