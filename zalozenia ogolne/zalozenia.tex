@@ -38,6 +38,11 @@ Nie są tu poruszane kwestie implementacyjne, których szczegóły można znale�
 
 \subsection{Opis produktu}
 
+\subsubsection{Czym jest Tarantula?}
+\noindent
+Tarantula jest biblioteką graficzną, to znaczy zbiorem funkcji i struktur (w rozumieniu programistycznym) mającym 
+na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. Osiągane jest to przez abstrakcję od poziomu interfejsu kary graficznej i udostępnienie programistom takich rozwiązań jak modele, sceny, efekty graficzne, obliczenia oświetlenia i inne.
+
 \subsubsection{Tło}
 \noindent
 Wraz ze wzrostem mocy i popularności nowoczesnych kart graficznych, zwiększają się możliwości tworzenia grafiki. 
@@ -46,25 +51,26 @@ działają na bardzo niskim poziomie abstrakcji. Na obiekty rozumiane przez ten 
 Wszystkie bardziej skomplikowane konstrukcje wymagają dużego wkładu własnego programisty. W związku z tym opracowano wiele programów 
 ułatwiających korzystanie z tych możliwości kart graficznych. 
 
-
-\subsubsection{Czym jest Tarantula?}
+\subsubsection{Dlaczego stworzona została Tarantula?}
 \noindent
-Tarantula jest silnikiem graficznym, to znaczy zbiorem funkcji i struktur (w rozumieniu programistycznym) mającym 
-na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. 
-Interfejs udostępniany przez karty graficznie jest bardzo niskiego poziomu - 
-opiera się na manipulowaniu podstawowymi figurami geometrycznymi przy użyciu elementarnych funkcji.
-Dlatego każdy programista wykorzystujący możliwości kart graficznych do nietrywialnych celów musi skorzystać z jakiejś biblioteki graficznej.
+Głównym celem stworzenia Tarantula jest wykorzystanie jej przez firmę przy produkcji własnych gier oraz narzędzi. 
+Stworzenie własnej biblioteki ma w tym wypadku pewne korzyści nad wykorzystaniem jednego z wielu płatnych i bezpłatnych bibliotek 
+dostępnych na rynku. W przypadku bibliotek komercyjnych przeszkodą jest oczywiście cena, natomiast w przypadku korzystania z darmowych 
+bibliotek dochodzi konieczność zapewnienia zgodność z licencjami wszystkich komponentów użytych w bibliotece. Może to skutkować nawet 
+brakiem możliwości sprzedaży gry lub oddaniu części dochodów twórcy biblioteki. W przypadku napisania własnej biblioteki istotna jest też możliwość dostosowanie szczegółowych 
+możliwości i sposobu działania biblioteki do specyfiki produktów tworzonych przez firmę.
 
 \section{Opis użytkownika}
 \subsection{Dla kogo jest Tarantula?}
 \noindent
-Tarantula została stworzona dla osób tworzących aplikacje wyświetlające obrazy trójwymiarowe. Ponieważ Tarantula jest biblioteką a nie samodzielnym programem, 
+Tarantula została napisana dla programistów tworzących aplikacje wyświetlające obrazy trójwymiarowe. Ponieważ Tarantula jest biblioteką a nie samodzielnym programem, 
 nie jest bezpośrednio przydatna osobom, które nie zajmują się pisaniem programów.
 
 \section{Szczegółowy opis produktu}
 
-\subsection{Podstawowe cechy}
-Do podstawowych cech oferowanych przez Tarantulę zaliczamy:
+\subsection{Podstawowe możliwości}
+\noindent
+Do podstawowych możliwości oferowanych przez Tarantulę zaliczamy:
 \begin{itemize}
  \item obsługę i ładowanie modeli i tekstur z popularnych formatów, dostarczanych na przykład przez programy 3d Studio Max i Blender. 
  Pozwala to na abstrakcję od poziomu karty graficznej, gdzie istnieją tylko wielokąty.
@@ -74,30 +80,25 @@ Do podstawowych cech oferowanych przez Tarantulę zaliczamy:
 \item wykrywanie kolizji
 \item podstawowe wsparcie dla animacji
 \item systemy cząsteczkowe oparte o realistyczne modele fizyczne
-\item silnik poziomu detali umożliwiający tworzenie scen w dużej skali
+\item mechanizm poziomu detali umożliwiający tworzenie scen w dużej skali
 \item zaawansowane modele oświetlenia (szeroki zakres dynamiczny (HDR), oświetlenie globalne (global illumination))
 \item wykorzystanie możliwości najnowszych wersji API graficznych  - OpenGL 4.2
 \end{itemize}
 
 
-\section{Cechy produktu}
-
-Tarantula jest biblioteką napisaną w języku C++. Korzystanie z niej sprowadza się do zaimportowania odpowiednich plików nagłówkowych, 
+\subsection{Cechy produktu}
+\noindent
+Tarantula jest biblioteką napisaną w języku C++. Korzystanie z niej sprowadza się do dołączenia do pisanego zaimportowania odpowiednich plików nagłówkowych, 
 które zawierają deklaracje klas i funkcji. Korzystając z dostarczonej funkcjonalności wystarczy przygotować okno do wyświetlania grafiki, 
 uruchomić manadżera sceny i program jest gotowy do wyświetlania podstawowej grafiki.
 
 
-Głównym celem stworzenia silnika graficznego ,,Tarantula'' jest wykorzystanie go przez firmę przy produkcji własnych gier oraz narzędzi. 
-Stworzenie własnego silnika ma w tym wypadku ma pewne korzyści nad wykorzystaniem jednego z wielu płatnych i bezpłatnych silników 
-dostępnych na rynku. W przypadku silników komercyjnych przeszkodą jest oczywiście cena, natomiast w przypadku korzystania z darmowych 
-silników dochodzi konieczność zapewnienia zgodność z licencjami wszystkich komponentów użytych w silniku. Może to skutkować nawet 
-brakiem możliwości sprzedaży gry, lub oddaniu części dochodów twórcy silnika. Nie bez znaczenia jest też dostosowanie szczegółowych 
-możliwości i sposobu działania silnika do specyfiki gier pisanych przez firmę.
+
 
 \section{Podstawowe przypadki użycia}
 Podstawowe przypadki użycia
 \begin{itemize}
-\item jako silnik w grze
+\item jako biblioteka w grze
 \item jako element wyświetlający modele w przeglądarce zasobów graficznych
 \item jako komponent programu do tworzenia podstawowych animacji
 \end{itemize}
