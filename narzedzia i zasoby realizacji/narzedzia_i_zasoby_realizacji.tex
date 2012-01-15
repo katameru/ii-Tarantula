@@ -10,24 +10,51 @@
 \usepackage{graphicx}
 \usepackage{pdflscape}
 
-\title{\LARGE Dokumentacja projektu \textbf{Tarantula}\\
-							Narzędzia i sposoby realizacji}
-\author{Marcin Januszkiewicz, Piotr Sobczyk}
-\date{Wrocław, \today}
 
 \begin{document}
-\maketitle 
+%strona tytułowa
+
+\begin{center}
+\thispagestyle{empty}
+{\Large Studencka Pracownia Inżynierii Oprogramowania}\\[0.5cm]
+{\Large Zespół nr 8, IIUWr 2011/12}\\[2.5cm]
+
+{Marcin Januszkiewicz, Piotr Sobczyk}\\[0.5cm]
+{\huge Dokumentacja projektu \textbf{Tarantula}}\\[0.25cm]
+{ Zaplecze sprzętowe i programowe}\\[0.5cm]
+\vfill
+{\large Wrocław, \today}
+\end{center}
+
 \newpage
 \tableofcontents
 \newpage
 
 
-\section{Narzędzia użyte w realizacji projektu}
+\section{Wymagania sprzętowe do użytkowania ,,Tarantuli''}
 
-\subsection{Silnik graficzny}
+\begin{center}
+ \begin{tabular}{|p{4cm}|p{3cm}|}
+  \hline
+ Część architektury komputerowej & Minimalne wymagania \\ \hline
+  Procesor & 2 GH ??? \\ \hline
+Architektura & 32 bity ??? \\ \hline
+ Karta graficzna & ??? \\ \hline
+Pamięć RAM & 2 GB \\ \hline
+Dysk twardy & 30 MB ??? \\ \hline
+ \end{tabular}
+\end{center}
 
+Dodatkowo, aby ,,Tarantula'' działała poprawnie potrzebny jest następujące oprogramowanie:
+\begin{enumerate}
+ \item Kompilator gcc w wersji 4.2 lub nowszej
+  \item Biblioteki QT w wersji 4 (interfejs graficzny) ???
+ \item Bazy danych MySQL ???
+\end{enumerate}
 
-\subsection{Interfejs użytkownika}
+\section{Narzędzia użyte w realizacji projektu. Informacja dla deweloperów}
+Program ,,Tarantula'' składa się z dwóch części. Pierwsza, biblioteka wspomagająca tworzenie grafiki komputerowej,
+została napisana w języku C. Druga, interfejs graficzny, została wykonana w technologii QT.
 
 \end{document}
 
