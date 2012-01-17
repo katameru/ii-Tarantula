@@ -29,28 +29,25 @@
 
 
 \section{Słownik}
+\begin{description}
+ \item[scena] --- abstrakcyjna reprezentacja tego, co jest widoczne w wirtualnym świecie. Scena może zawierać modele na przykład drzewa, domy, oświetlające je źródła światła i obserwujące wszystko kamery.
+ 
+ \item[model] --- komputerowa reprezentacja trójwymiarowego obiektu
 
-API - interfejs programowania aplikacji (ang. Application Pragramming Interface); zestaw reguł pozwalający dwóm programom komputerowym na komunikację.
 
-optymalizacja - przekształcenie mające na celu redukcję wykorzystywanych zasobów.
+\item[trójkąt] --- podstawowa jednostka modelu trójwymiarowego, opisuje naprostszą rysowalną powierzchnię. Trójkąt opisywany jest przez trzy punkty w przestrzeni trójwymiarowej. Modele mogą składać się nawet z tysięcy trójkątów.
 
-scena - abstrakcyjna reprezentacja tego, co jest widoczne w wirtualnym świecie. Scena może zawierać modele na przykład drzewa, domy, oświetlające je źródła światła i obserwujące wszystko kamery.
+\item[tekstura] --- opis powierzchni modelu, z reguły ogranicza się do jej wyglądu
 
-model - komputerowa reprezentacja trójwymiarowego obiektu
+\item[system cząsteczkowy] --- technika umożliwiająca symulację zdarzeń takich jak ogień, eksplozje, deszcz, co byłoby trudne do zrobienia korzystając z konwencjonalnych technik wizualizacji.
 
-trójkąt - podstawowa jednostka modelu trójwymiarowego, opisuje naprostszą rysowalną powierzchnię. Trójkąt opisywany jest przez trzy punkty w przestrzeni trójwymiarowej. Modele mogą składać się nawet z tysięcy trójkątów.
+\item[silnik poziomu detali] --- element silnika graficznego pozwalający na zmiejszenie wykorzystania zasobów przez model przez zmiejszenie liczby jego trójkątów, uproszczenie tekstury, niesymulowaniu działających nań efektów lub nawet nierysowaniu go w ogóle, jeżeli nie jest to potrzebne (np. obiekt położony jest bardzo daleko).
 
-tekstura - opis powierzchni modelu, z reguły ogranicza się do jej wyglądu
+\item[model oświetlenia] --- zestaw reguł pozwalający na obliczenie natężenia i koloru światła padającego na każdy rysowany obiekt.
 
-system cząsteczkowy - technika umożliwiająca symulację zdarzeń takich jak ogień, eksplozje, deszcz, co byłoby trudne do zrobienia korzystając z konwencjonalnych technik wizualizacji.
+\item[Direct3D] --- API graficzne dostarczane jako część biblioteki graficznej DirectX przez firmę Microsoft. Dostępne jedynie na platformie windows oraz w pewnym stopniu na konsolach Xbox.
 
-silnik poziomu detali - element silnika graficznego pozwalający na zmiejszenie wykorzystania zasobów przez model przez zmiejszenie liczby jego trójkątów, uproszczenie tekstury, niesymulowaniu działających nań efektów lub nawet nierysowaniu go w ogóle, jeżeli nie jest to potrzebne (np. obiekt położony jest bardzo daleko).
-
-model oświetlenia - zestaw reguł pozwalający na obliczenie natężenia i koloru światła padającego na każdy rysowany obiekt.
-
-Direct3D - API graficzne dostarczane jako część biblioteki graficznej DirectX przez firmę Microsoft. Dostępne jedynie na platformie windows oraz w pewnym stopniu na konsolach Xbox.
-
-OpenGL - API graficzne dostarczane przez firmę ARB, dostępne m.in. na systemach Windows, Linux, Mac OS.
-
+\item[OpenGL] --- API graficzne dostarczane przez firmę ARB, dostępne m.in. na systemach Windows, Linux, Mac OS.
+ \end{description}
 \end{document}
 
