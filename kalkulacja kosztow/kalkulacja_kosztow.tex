@@ -9,14 +9,28 @@
 \usepackage{multirow} 
 \usepackage{graphicx}
 \usepackage{pdflscape}
-
-\title{\LARGE Dokumentacja projektu \textbf{Tarantula}\\
-							Kalkulacja kosztów}
-\author{Marcin Januszkiewicz, Piotr Sobczyk}
-\date{Wrocław, \today}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
 
 \begin{document}
-\maketitle 
+ 
+
+
+%strona tytułowa
+
+\begin{center}
+\thispagestyle{empty}
+{\Large Studencka Pracownia Inżynierii Oprogramowania}\\[0.5cm]
+{\Large Zespół nr 8, IIUWr 2011/12}\\[2.5cm]
+
+{Marcin Januszkiewicz, Piotr Sobczyk}\\[0.5cm]
+{\huge Dokumentacja projektu \textbf{Tarantula}}\\[0.25cm]
+{ Kalkulacja kosztów}\\[0.5cm]
+\vfill
+{\large Wrocław, \today}
+\end{center}
+
 \newpage
 \tableofcontents
 \newpage
@@ -25,7 +39,21 @@
 
 \section{Opis ilościowy kosztów}
 
-tabela z kosztami podzielonymi na różne kategorie
+\vspace{1 cm}
+\hspace{-1.5cm}
+{\small Tabela 1. Czynniki ryzyka z oceną szansy wystąpienia i sposobu minimalizacji strat.}
+ \begin{tabular}{|p{10cm}|p{2cm}|}
+  \hline
+ Rodzaj kosztu & Szacunkowa wartość  \\ \hline
+  2 programistów na 8 tygodni & 2*8*40*20 = 12,800 zł. \\ \hline
+ Komputer do wykonania testów & 5000 zł. \\ \hline
+ Karty graficzne do testów & 2000 zł. \\ \hline
+ Kosz zewnętrznej ekspertyzy w trakcie projektu & 2*1500 = 3000 zł. \\ \hline
+Rezerwa na awarie & 1000 zł. \\ \hline
+Rezerwa na premie dla programistów & 3000 zł. \\ \hline
+Rezerwa na nieprzewidziane koszty & 2500 zł. \\ \hline
+Łączne koszty & 19,300 zł. \\ \hline
+ \end{tabular}
 
 \end{document}
 
