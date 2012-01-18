@@ -9,14 +9,25 @@
 \usepackage{multirow} 
 \usepackage{graphicx}
 \usepackage{pdflscape}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
 
-\title{\LARGE Dokumentacja projektu \textbf{Tarantula}\\
-							Kalkulacja kosztów}
-\author{Marcin Januszkiewicz, Piotr Sobczyk}
-\date{Wrocław, \today}
 
-\begin{document}
-\maketitle 
+%strona tytułowa
+
+\begin{center}
+\thispagestyle{empty}
+{\Large Studencka Pracownia Inżynierii Oprogramowania}\\[0.5cm]
+{\Large Zespół nr 8, IIUWr 2011/12}\\[2.5cm]
+
+{Marcin Januszkiewicz, Piotr Sobczyk}\\[0.5cm]
+{\huge Dokumentacja projektu \textbf{Tarantula}}\\[0.25cm]
+{ Kalkulacja kosztów}\\[0.5cm]
+\vfill
+{\large Wrocław, \today}
+\end{center}
+
 \newpage
 \tableofcontents
 \newpage

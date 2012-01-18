@@ -6,7 +6,9 @@
 \frenchspacing
 \usepackage{indentfirst}
 
-
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
 \begin{document}
 
 %strona tytułowa
@@ -41,7 +43,8 @@ Nie są tu poruszane kwestie implementacyjne, których szczegóły można znale�
 \subsubsection{Czym jest Tarantula?}
 \noindent
 Tarantula jest biblioteką graficzną, to znaczy zbiorem funkcji i struktur (w rozumieniu programistycznym) mającym 
-na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. Osiągane jest to przez abstrakcję od poziomu interfejsu kary graficznej i udostępnienie programistom takich rozwiązań jak modele, sceny, efekty graficzne, obliczenia oświetlenia i inne.
+na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. 
+Osiągane jest to przez abstrahowanie od poziomu interfejsu kary graficznej i udostępnienie programistom takich rozwiązań jak modele, sceny, efekty graficzne, obliczenia oświetlenia i inne.
 
 \subsubsection{Tło}
 \noindent
@@ -53,7 +56,7 @@ ułatwiających korzystanie z tych możliwości kart graficznych.
 
 \subsubsection{Dlaczego stworzona została Tarantula?}
 \noindent
-Głównym celem stworzenia Tarantula jest wykorzystanie jej przez firmę przy produkcji własnych gier oraz narzędzi. 
+Głównym celem stworzenia Tarantuli jest wykorzystanie jej przez firmę przy produkcji własnych gier oraz narzędzi. 
 Stworzenie własnej biblioteki ma w tym wypadku pewne korzyści nad wykorzystaniem jednego z wielu płatnych i bezpłatnych bibliotek 
 dostępnych na rynku. W przypadku bibliotek komercyjnych przeszkodą jest oczywiście cena, natomiast w przypadku korzystania z darmowych 
 bibliotek dochodzi konieczność zapewnienia zgodność z licencjami wszystkich komponentów użytych w bibliotece. Może to skutkować nawet 
