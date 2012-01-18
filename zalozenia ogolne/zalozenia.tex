@@ -6,7 +6,6 @@
 \frenchspacing
 \usepackage{indentfirst}
 
-
 \begin{document}
 
 %strona tytułowa
@@ -40,57 +39,54 @@ Nie są tu poruszane kwestie implementacyjne, których szczegóły można znale�
 
 \subsubsection{Czym jest Tarantula?}
 \noindent
-Tarantula jest biblioteką graficzną, to znaczy zbiorem funkcji i struktur (w rozumieniu programistycznym) mającym 
-na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. Osiągane jest to przez abstrakcję od poziomu interfejsu kary graficznej i udostępnienie programistom takich rozwiązań jak modele, sceny, efekty graficzne, obliczenia oświetlenia i inne.
+Tarantula jest biblioteką graficzną, to znaczy zbiorem funkcji i struktur (w~rozumieniu programistycznym) mającym 
+na celu ułatwienie i przyspieszenie korzystania przez programistów z możliwości współczesnych kart graficznych. Osiągane jest to przez abstrachowanie od poziomu interfejsu karty graficznej i udostępnienie programistom takich rozwiązań, jak modele, sceny, efekty graficzne, obliczenia oświetlenia i inne.
 
 \subsubsection{Tło}
 \noindent
 Wraz ze wzrostem mocy i popularności nowoczesnych kart graficznych, zwiększają się możliwości tworzenia grafiki. 
-Niestety metody programowania kart graficznych wymagają dużego nakładu pracy, ponieważ funkcje dostarczane przez producentów 
-działają na bardzo niskim poziomie abstrakcji. Na obiekty rozumiane przez ten interfejs składają się jedynie trójwymiarowe modele zbudowane z trójkątów i płaskich tekstur. 
-Wszystkie bardziej skomplikowane konstrukcje wymagają dużego wkładu własnego programisty. W związku z tym opracowano wiele programów 
-ułatwiających korzystanie z tych możliwości kart graficznych. 
+Niestety, metody programowania kart graficznych wymagają dużego nakładu pracy, ponieważ funkcje dostarczane przez producentów 
+działają na bardzo niskim poziomie abstrakcji. Na obiekty rozumiane przez interfejs karty graficznej składają się jedynie trójwymiarowe modele zbudowane z trójkątów i płaskich tekstur. 
+Wszystkie bardziej skomplikowane konstrukcje wymagają dużego wkładu własnego programisty. W~związku z tym opracowano wiele programów 
+ułatwiających korzystanie z~zaawansowanych możliwości kart graficznych. 
 
-\subsubsection{Dlaczego stworzona została Tarantula?}
+\subsubsection{Dlaczego napisana została Tarantula?}
 \noindent
-Głównym celem stworzenia Tarantula jest wykorzystanie jej przez firmę przy produkcji własnych gier oraz narzędzi. 
-Stworzenie własnej biblioteki ma w tym wypadku pewne korzyści nad wykorzystaniem jednego z wielu płatnych i bezpłatnych bibliotek 
-dostępnych na rynku. W przypadku bibliotek komercyjnych przeszkodą jest oczywiście cena, natomiast w przypadku korzystania z darmowych 
-bibliotek dochodzi konieczność zapewnienia zgodność z licencjami wszystkich komponentów użytych w bibliotece. Może to skutkować nawet 
-brakiem możliwości sprzedaży gry lub oddaniu części dochodów twórcy biblioteki. W przypadku napisania własnej biblioteki istotna jest też możliwość dostosowanie szczegółowych 
+Głównym powodem napisania Tarantula jest wykorzystanie jej przez firmę do produkcji własnych gier oraz narzędzi. 
+Napisanie własnej biblioteki ma w tym wypadku pewne korzyści nad wykorzystaniem jednej z wielu płatnych i bezpłatnych bibliotek 
+dostępnych na rynku. W przypadku bibliotek komercyjnych przeszkodą jest oczywiście cena, natomiast w przypadku korzystania z bibliotek niekomercyjnych dochodzi konieczność zapewnienia zgodności z licencjami wszystkich komponentów użytych w bibliotece. Może to skutkować nawet 
+brakiem możliwości sprzedaży gry lub oddaniem części dochodów twórcy biblioteki. W przypadku napisania własnej biblioteki istotna jest też możliwość dostosowanie szczegółowych 
 możliwości i sposobu działania biblioteki do specyfiki produktów tworzonych przez firmę.
 
 \section{Opis użytkownika}
 \subsection{Dla kogo jest Tarantula?}
 \noindent
-Tarantula została napisana dla programistów tworzących aplikacje wyświetlające obrazy trójwymiarowe. Ponieważ Tarantula jest biblioteką a nie samodzielnym programem, 
+Tarantula została napisana dla programistów tworzących aplikacje wyświetlające obrazy trójwymiarowe. Ponieważ Tarantula jest biblioteką, a nie samodzielnym programem, 
 nie jest bezpośrednio przydatna osobom, które nie zajmują się pisaniem programów.
 
 \section{Szczegółowy opis produktu}
 
 \subsection{Podstawowe możliwości}
 \noindent
-Do podstawowych możliwości oferowanych przez Tarantulę zaliczamy:
+Do podstawowych możliwości Tarantuli zaliczamy:
 \begin{itemize}
- \item obsługę i ładowanie modeli i tekstur z popularnych formatów, dostarczanych na przykład przez programy 3d Studio Max i Blender. 
- Pozwala to na abstrakcję od poziomu karty graficznej, gdzie istnieją tylko wielokąty.
-  \item wbudowane zarządzanie sceną
-\item wykonanie elementarnych przekształceń graficznych
-\item automatyczne optymalizacje takie jak usuwanie niewidocznych powierzchni, redukcja liczby trójkatów. Redukują one zasoby potrzebne na przechowywanie i generowanie grafiki.
-\item podstawowe wsparcie dla animacji
-\item systemy cząsteczkowe oparte o realistyczne modele fizyczne
-\item mechanizm poziomu detali umożliwiający tworzenie scen w dużej skali
-\item zaawansowane modele oświetlenia (szeroki zakres dynamiczny (HDR), oświetlenie globalne (global illumination))
-\item wykorzystanie możliwości najnowszych wersji API graficznych  - OpenGL 4.2
+ \item obsługę i ładowanie modeli i tekstur z popularnych formatów, dostarczanych na przykład przez programy 3d Studio Max i Blender, co pozwala na odejście od poziomu abstrakcji karty graficznej, na którym istnieje tylko możliwość definiowania wielokątów;
+  \item wbudowane zarządzanie sceną;
+\item wykonywanie elementarnych przekształceń graficznych;
+\item automatyczne optymalizacje zmniejszające zapotrzebowanie na pamięć i przetwarzanie, takie jak usuwanie niewidocznych powierzchni, redukcja liczby trójkatów;
+\item {\bf systemy cząsteczkowe} napisane w oparciu o realistyczne modele fizyczne
+\item {\bf mechanizm poziomu detali} umożliwiający tworzenie wielkoskalowych scen;
+\item zaawansowane modele oświetlenia (szeroki zakres dynamiczny, oświetlenie globalne)
+\item wykorzystanie możliwości najnowszych wersji interfejsu graficznego OpenGL
 \end{itemize}
 
 
-\section{Podstawowe przypadki użycia}
-Podstawowe przypadki użycia
+\section{Wykaz nazw podstawowych przypadków użycia}
+Podstawowe przypadki użycia oprogramowania Tarantula:
 \begin{itemize}
-\item jako biblioteka w grze
-\item jako element wyświetlający modele w przeglądarce zasobów graficznych
-\item jako komponent programu do tworzenia podstawowych animacji
+\item jako biblioteka w grze,
+\item jako element wyświetlający modele w przeglądarce zasobów graficznych,
+\item jako komponent programu do tworzenia podstawowych animacji.
 \end{itemize}
 
 

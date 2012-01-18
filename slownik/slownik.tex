@@ -30,24 +30,26 @@
 
 \section{Słownik}
 \begin{description}
- \item[scena] --- abstrakcyjna reprezentacja tego, co jest widoczne w wirtualnym świecie. Scena może zawierać modele na przykład drzewa, domy, oświetlające je źródła światła i obserwujące wszystko kamery.
+ \item[scena] --- abstrakcyjna reprezentacja wizualizowanych sytuacji. Scena może zawierać modele, na przykład drzewa i domy, oświetlające te modele {\bf źródła światła} i obserwujące wszystko {\bf kamery}.
  
- \item[model] --- komputerowa reprezentacja trójwymiarowego obiektu
+ \item[model] --- komputerowa reprezentacja obiektu trójwymiarowego.
 
 
-\item[trójkąt] --- podstawowa jednostka modelu trójwymiarowego, opisuje naprostszą rysowalną powierzchnię. Trójkąt opisywany jest przez trzy punkty w przestrzeni trójwymiarowej. Modele mogą składać się nawet z tysięcy trójkątów.
+\item[trójkąt] --- podstawowa jednostka modelu trójwymiarowego, opisuje naprostszą rysowaną powierzchnię. Trójkąt opisywany jest przez trzy punkty w przestrzeni trójwymiarowej. Modele mogą składać się nawet z tysięcy trójkątów.
 
-\item[tekstura] --- opis powierzchni modelu, z reguły ogranicza się do jej wyglądu
+\item[tekstura] --- opis powierzchni modelu. Z reguły ogranicza się do jej wyglądu, ale może też zawierać informacje mające wpływ na liczenie oświetlenia.
 
 \item[system cząsteczkowy] --- technika umożliwiająca symulację zdarzeń takich jak ogień, eksplozje, deszcz, co byłoby trudne do zrobienia korzystając z konwencjonalnych technik wizualizacji.
 
-\item[silnik poziomu detali] --- element silnika graficznego pozwalający na zmiejszenie wykorzystania zasobów przez model przez zmiejszenie liczby jego trójkątów, uproszczenie tekstury, niesymulowaniu działających nań efektów lub nawet nierysowaniu go w ogóle, jeżeli nie jest to potrzebne (np. obiekt położony jest bardzo daleko).
+\item[mechanizm poziomu detali] --- element oprogramowania graficznego pozwalający na zmiejszenie wykorzystania zasobów modelu przez zmiejszenie liczby trójkątów, uproszczenie tekstury, niesymulowanie efektów lub nawet nierysowanie go w ogóle, jeżeli nie jest to potrzebne (np. obiekt położony jest bardzo daleko).
 
-\item[model oświetlenia] --- zestaw reguł pozwalający na obliczenie natężenia i koloru światła padającego na każdy rysowany obiekt.
+\item[model oświetlenia] --- zestaw reguł obliczania natężenia i koloru światła padającego na każdy rysowany obiekt.
 
-\item[Direct3D] --- API graficzne dostarczane jako część biblioteki graficznej DirectX przez firmę Microsoft. Dostępne jedynie na platformie windows oraz w pewnym stopniu na konsolach Xbox.
+\item[OpenGL] --- interfejs graficzny dostarczany przez firmę ARB, dostępny m.in. w systemach Windows, Linux, Mac OS.
 
-\item[OpenGL] --- API graficzne dostarczane przez firmę ARB, dostępne m.in. na systemach Windows, Linux, Mac OS.
+\item[źródło światła] --- element sceny zawierający informacje potrzebne do obliczenia oświetlenia w scenie. Są to między innymi położenie, natężenie i kierunek padania światła, a także inne informacje zależne od wybranego modelu oświetlenia (na przykład, czy źródło światło jest punktem czy zachowouje się jak reflektor).
+
+\item[kamera] --- element sceny zawierający informacje potrzebne do wyświetlenia sceny z 'punktu widzenia' tego elementu.
  \end{description}
 \end{document}
 
